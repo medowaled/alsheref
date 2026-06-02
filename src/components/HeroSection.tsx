@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { HERO_SLIDES } from '../data';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
+import { getAssetUrl } from '../utils/path';
 
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -34,7 +35,7 @@ export function HeroSection() {
           <div className="absolute inset-0 bg-mesh-grid z-10 opacity-20" />
           
           <motion.img
-            src={HERO_SLIDES[currentSlide].image}
+            src={getAssetUrl(HERO_SLIDES[currentSlide].image)}
             alt={HERO_SLIDES[currentSlide].title}
             initial={{ scale: 1.15 }}
             animate={{ scale: 1 }}

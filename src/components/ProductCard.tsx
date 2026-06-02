@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Info, MessageCircle, Ruler, Maximize, ShieldCheck, Package } from 'lucide-react';
 import { WhatsAppFormModal } from './WhatsAppFormModal';
+import { getAssetUrl } from '../utils/path';
 
 interface ProductCardProps {
   product: {
@@ -72,7 +73,7 @@ export function ProductCard({ product }: ProductCardProps) {
             </div>
           ) : (
             <img 
-              src={product.image} 
+              src={getAssetUrl(product.image)} 
               alt={product.name}
               onLoad={() => setImageLoaded(true)}
               onError={() => setImageError(true)}

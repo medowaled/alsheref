@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import { COMPANY_INFO } from '../data';
+import { getAssetUrl } from '../utils/path';
 
 export function Footer() {
   return (
@@ -13,7 +14,7 @@ export function Footer() {
             <div className="flex items-center gap-2 mb-6">
               <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center bg-white shadow-md">
                 <img 
-                  src="public/503479033_1100126365470742_7704255855353260207_n copy 2.jpg" 
+                  src={getAssetUrl('503479033_1100126365470742_7704255855353260207_n copy 2.jpg')} 
                   alt="لوجو الشريف" 
                   className="w-full h-full object-cover" 
                 />

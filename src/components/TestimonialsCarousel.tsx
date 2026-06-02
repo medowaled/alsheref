@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { TESTIMONIALS } from '../data';
 import { Star, Quote } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { getAssetUrl } from '../utils/path';
 
 const PARTNERS = [
   { name: 'المقاولون العرب', logo: 'arab_contractors' },
@@ -16,7 +17,7 @@ function PartnerLogo({ id }: { id: string }) {
   if (id === 'arab_contractors') {
     return (
       <img 
-        src="/images/partners/arab_contractors.png" 
+        src={getAssetUrl('images/partners/arab_contractors.png')} 
         alt="المقاولون العرب" 
         className="h-10 md:h-12 object-contain opacity-90 group-hover:opacity-100 transition-all duration-300"
       />
@@ -25,7 +26,7 @@ function PartnerLogo({ id }: { id: string }) {
   if (id === 'talaat_moustafa') {
     return (
       <img 
-        src="/images/partners/talaat_moustafa.webp" 
+        src={getAssetUrl('images/partners/talaat_moustafa.webp')} 
         alt="طلعت مصطفى" 
         className="h-10 md:h-12 object-contain opacity-90 group-hover:opacity-100 transition-all duration-300"
       />
@@ -34,7 +35,7 @@ function PartnerLogo({ id }: { id: string }) {
   if (id === 'orascom') {
     return (
       <img 
-        src="/images/partners/orascom.svg" 
+        src={getAssetUrl('images/partners/orascom.svg')} 
         alt="أوراسكوم" 
         className="h-10 md:h-12 object-contain opacity-90 group-hover:opacity-100 transition-all duration-300"
       />
@@ -43,7 +44,7 @@ function PartnerLogo({ id }: { id: string }) {
   if (id === 'morshedy') {
     return (
       <img 
-        src="/images/partners/morshedy.svg" 
+        src={getAssetUrl('images/partners/morshedy.svg')} 
         alt="معمار المرشدي" 
         className="h-10 md:h-12 object-contain opacity-90 group-hover:opacity-100 transition-all duration-300"
       />

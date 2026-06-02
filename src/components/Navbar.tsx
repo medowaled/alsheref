@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, PhoneCall } from 'lucide-react';
 import { COMPANY_INFO } from '../data';
 import { motion, AnimatePresence } from 'framer-motion';
+import { getAssetUrl } from '../utils/path';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +41,7 @@ export function Navbar() {
           <Link to="/" className="flex items-center gap-2 group">
             <div className="w-11 h-11 rounded-full overflow-hidden flex items-center justify-center bg-white shadow-md transition-transform duration-500 group-hover:rotate-12 group-hover:scale-105">
               <img 
-                src="public/503479033_1100126365470742_7704255855353260207_n copy 2.jpg" 
+                src={getAssetUrl('503479033_1100126365470742_7704255855353260207_n copy 2.jpg')} 
                 alt="لوجو الشريف" 
                 className="w-full h-full object-cover" 
               />
