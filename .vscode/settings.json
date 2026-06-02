@@ -1,0 +1,12 @@
+{
+    "python-envs.pythonProjects": [
+        {
+            "path": "public/image/vertecal",
+            "envManager": "ms-python.python:venv",
+            "packageManager": "ms-python.python:pip"
+        }
+    ],
+    "css.validate": false,
+    "scss.validate": false,
+    "css.lint.unknownAtRules": "ignore"
+}
